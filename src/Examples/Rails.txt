@@ -1,0 +1,22 @@
+graphics = g [0,(\*y1->[rect [ 0, 41, 82, *y1, 18, 91],rect [ 0, 41, 111, *y1, 18, 91],rect [ 0, 41, 140, *y1, 18, 91],rect [ 0, 41, 169, *y1, 18, 91],rect [ 0, 41, 198, *y1, 18, 91],rect [ 0, 41, 227, *y1, 18, 91],rect [ 0, 41, 256, *y1, 18, 91]]) 316];
+getCttParam = \obj->nth 3 (Graphic.unwrap (nth 0 (nth 1 (Graphic.unwrap (nth 0 obj)))));//拿y1
+setCttFun = \*rect1_y->\obj->
+    let getCttParam= \obj->nth 5 (Graphic.unwrap (nth 0 (nth 1 (Graphic.unwrap (nth 0 obj))))) in
+        let setCttFun= \*rect1_height->\obj->
+            let getCttParam= \obj->nth 5 (Graphic.unwrap (nth 2 obj)) in
+                let setCttFun= \*rect9_height->\obj->
+                    let getCttParam= \obj->nth 3 (Graphic.unwrap (nth 1 obj)) in
+                        let setCttFun= \*rect8_y->\obj->
+                            let consEdit1= \x6::x5::x4::x3::x2::x1::x0->x6::x5::x4::*rect1_y::x2::*rect1_height::x0 in
+                                let consEdit2= \x6::x5::x4::x3::x2::x1::x0->x6::x5::x4::x3::x2::*rect9_height::x0 in
+                                    let consEdit3= \x6::x5::x4::x3::x2::x1::x0->x6::x5::x4::*rect8_y::x2::x1::x0 in
+                                        let consEdit4= \x6::x5::x4::x3::x2::x1::x0->x6::x5::x4::(*rect1_y*2+*rect1_height-*rect9_height-*rect8_y)::x2::x1::x0 in
+mod 2 (\x->Graphic.map (\params->(consEdit4 params)) x) (mod 1 (\x->Graphic.map (\params->(consEdit3 params)) x) (mod 2 (\x->Graphic.map (\params->(consEdit2 params)) x) (mod 0 (\x->Graphic.map (\params->mod 1 (\x->mod 0 (\x->Graphic.map (\params->(consEdit1 params)) x) x) params) x) obj))) in
+                                            let cttFun= \obj->setCttFun (getCttParam obj) obj in
+                                                cttFun obj in
+                                            let cttFun= \obj->setCttFun (getCttParam obj) obj in
+                                                cttFun obj in
+                                            let cttFun= \obj->setCttFun (getCttParam obj) obj in
+                                                cttFun obj;
+cttFun = \obj->setCttFun (getCttParam obj) obj;
+main = (\*rect8_x->cttFun (graphics::[rect [ 0, 215, *rect8_x, 328, 213, 15], rect [ 0, 215, (*rect8_x), 373, 213, 15]])) 71;

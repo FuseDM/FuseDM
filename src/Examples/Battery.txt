@@ -1,0 +1,1 @@
+main = (\*rect2_height->(\*rect1_x->(\*rect1_width->[rect [ 0, 147, *rect1_x, 191, *rect1_width, (*rect2_height*2)], rect [ 0, 147, (*rect1_x+*rect1_width), 207, 18, *rect2_height]]) 117) 137) 32;

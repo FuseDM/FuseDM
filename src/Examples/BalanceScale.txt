@@ -1,0 +1,8 @@
+consEdit1 = \x6::x5::x4::x3::x2::x1::x0->x6::x5::(x4+182)::(x3+-15)::(x2+182)::(x1+-15)::x0;
+consEdit2 = \x6::x5::x4::x3::x2::x1::x0->x6::x5::(x4+182)::(x3+-15)::(x2+182)::(x1+-15)::x0;
+consEdit3 = \x6::x5::x4::x3::x2::x1::x0->x6::x5::(x4+182)::(x3+-15)::x2::x1::x0;
+consEdit4 = \x3::x2::x1::x0->Graphic.map (\params->(consEdit1 params)) x3::Graphic.map (\params->(consEdit2 params)) x2::Graphic.map (\params->(consEdit3 params)) x1::x0;
+consEdit5 = \x2::x1::x0->x2::(consEdit4 x1)::x0;
+main = (\*line5_x1->(\*line5_y1->(\*line5_y2->(\*line4_x1->(\*line4_y1->(\*line1_x2->(\*line1_y2->(\*line3_x1->(\*line3_y1->(\*line3_x2->(\*line3_y2->(\*line4_x1->(\*ellipse2_cy->(\*ellipse2_cy->(\*ellipse2_cx->(\*ellipse2_rx->(\*ellipse2_cx->(\*ellipse2_rx->
+    let graphics = g [0,[line [ 0, 245, *line4_x1, *line4_y1, (*ellipse2_cx-*ellipse2_rx), (*ellipse2_cy)],line [ 0, 245, *line5_x1, *line5_y1, (*ellipse2_cx+*ellipse2_rx), (*ellipse2_cy)],ellipse [ 0, 38, *ellipse2_cx, *ellipse2_cy, *ellipse2_rx, 21]]] in
+    graphics::Graphic.map (\params->(consEdit5 params)) graphics::[line [ 0, 245, (*line4_x1), (*line4_y1), *line1_x2, *line1_y2], line [ 0, 245, (*line3_x1), (*line3_y1), 359, 219], line [ 0, 245, *line3_x1, *line3_y1, *line3_x2, *line3_y2], ellipse [ 0, 245, (*line3_x2), (*line3_y2), 86, 28]]) *ellipse2_rx) *ellipse2_cx) 53) (*line4_x1)) *ellipse2_cy) 345) *line4_x1) 400) 259) (*line1_y2)) (*line1_x2)) 206) 256) (*line5_y1)) (*line5_x1)) 320) 235) 178;

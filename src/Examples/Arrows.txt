@@ -1,0 +1,15 @@
+consEdit1 = \x6::x5::x4::x3::x2::x1::x0->x6::x5::(x4+218)::(x3+100)::(x2+218)::(x1+100)::x0;
+consEdit2 = \x6::x5::x4::x3::x2::x1::x0->x6::x5::(x4+218)::(x3+100)::(x2+218)::(x1+100)::x0;
+consEdit3 = \x6::x5::x4::x3::x2::x1::x0->x6::x5::(x4+218)::(x3+100)::(x2+218)::(x1+100)::x0;
+consEdit4 = \x3::x2::x1::x0->Graphic.map (\params->(consEdit1 params)) x3::Graphic.map (\params->(consEdit2 params)) x2::Graphic.map (\params->(consEdit3 params)) x1::x0;
+consEdit5 = \x1::x0->(consEdit4 x1)::x0;
+consEdit6 = \x1::x0->x1::(consEdit5 x0);
+consEdit = \x6::x5::x4::x3::x2::x1::x0->x6::x5::(x4+77)::(x3+196)::(x2+77)::(x1+196)::x0;
+consEdit = \x6::x5::x4::x3::x2::x1::x0->x6::x5::(x4+77)::(x3+196)::(x2+77)::(x1+196)::x0;
+consEdit = \x6::x5::x4::x3::x2::x1::x0->x6::x5::(x4+77)::(x3+196)::(x2+77)::(x1+196)::x0;
+consEdit = \x3::x2::x1::x0->Graphic.map (\params->(consEdit params)) x3::Graphic.map (\params->(consEdit params)) x2::Graphic.map (\params->(consEdit params)) x1::x0;
+consEdit = \x1::x0->(consEdit x1)::x0;
+consEdit = \x1::x0->x1::(consEdit x0);
+main = (\*line1_x2->(\*line1_y2->(\*line1_x2->(\*line1_y2->
+let graphics = g [0,[line [ 0, 0, 143, 349, *line1_x2, *line1_y2],line [ 0, 0, (*line1_x2), (*line1_y2), 278, 296],line [ 0, 0, (*line1_x2), (*line1_y2), 289, 375]]] in
+graphics::Graphic.map (\params-> mod 0 (\x-> (x+243)) params) Graphic.map (\params->(consEdit params)) graphics::Graphic.map (\params-> mod 0 (\x-> (x+30)) params) Graphic.map (\params->(consEdit6 params)) graphics::[]) *line1_y2) *line1_x2) 333) 320;

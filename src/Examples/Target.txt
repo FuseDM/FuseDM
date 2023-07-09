@@ -1,0 +1,2 @@
+graphics = g [0,(\*x1->(\*y1->[circle [ 0, 276, *x1, *y1, 86], circle [ 0, 180, *x1, *y1, 71],circle [ 0, 276, *x1, *y1, 56],circle [ 0, 180, *x1, *y1, 41],circle [ 0, 276, *x1, *y1, 26]]) 298) 117];
+main = graphics::[];

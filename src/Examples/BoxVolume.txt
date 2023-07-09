@@ -1,0 +1,9 @@
+main = (\rect1_height->(\rect1_width->(\polygon1_x0->(\polygon1_x3->(\polygon1_y2->(\polygon1_y1->(\polygon1_y0->(\polygon1_x3->(\rect3_width->(\polygon1_y3->(\polygon1_y2->(\polygon1_y3->(\polygon1_y0->(\polygon1_x0->(\rect4_width->[
+    rect [ 0, 47, 250, 206, rect1_width, rect1_height]
+    , rect [ 0, 47, 301, 157, (rect1_height), (rect1_width)]
+    , rect [ 0, 47, 233, 435, 16, 43]
+    , polygon [ 0, 47, (polygon1_x0,polygon1_y0)::((polygon1_x0),polygon1_y1)::((polygon1_x3),polygon1_y2)::(polygon1_x3,polygon1_y3)::nil]
+, rect [ 0, 47, (polygon1_x3+(-rect3_width)), (polygon1_y3), rect3_width, (polygon1_y2+(-polygon1_y3))]
+, rect [ 0, 47, (polygon1_x0+(-rect4_width)), (polygon1_y0), rect4_width, (polygon1_y2+(-polygon1_y3))]
+, polygon [ 0, 47, ((polygon1_x0+-76),(polygon1_y0+1))::(((polygon1_x0+-76)),(polygon1_y1+1))::(((polygon1_x3+-76)),(polygon1_y2+1))::((polygon1_x3+-76),(polygon1_y3+1))::nil]
+]) rect3_width) polygon1_x0) polygon1_y0) polygon1_y3) polygon1_y2) (polygon1_y2+(-polygon1_y1)+polygon1_y0)) 80) polygon1_x3) 412) 450) 501) 327) 235) 179) 75;

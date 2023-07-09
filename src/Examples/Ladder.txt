@@ -1,0 +1,13 @@
+main = 
+    (\*rect1_y->
+    (\*rect1_x->
+    (\*rect3_width->
+    (\*rect3_x->
+        let graphics = 
+            g [ 0
+            ,[ rect [ 0, 232, *rect3_x, 157, *rect3_width, 5]
+            ,rect [ 0, 232, (*rect3_x), 238, 179, 5]
+            ,rect [ 0, 232, (*rect1_x), 319, 179, 5]
+            ,rect [ 0, 232, (*rect1_x), 400, 179, 5]]]
+        in 
+        graphics::[rect [ 0, 232, *rect1_x, *rect1_y, 5, 349], rect [ 0, 232, (*rect1_x+*rect3_width), (*rect1_y), 5, 349]]) (*rect1_x)) 179) 173) 157;

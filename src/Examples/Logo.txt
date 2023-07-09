@@ -1,0 +1,9 @@
+main = 
+    (\*rect1_x->
+        (\*rect1_y->
+            (\*rect1_height->
+                (\*rect1_width->
+                    [ rect [ 0, 124, *rect1_x, *rect1_y, *rect1_width, *rect1_height]
+                    , polygon [ 0, 20, ((*rect1_x),(*rect1_y))::((*rect1_x),(*rect1_y+*rect1_height))::((*rect1_x+*rect1_height/2),(*rect1_y+*rect1_height/2))::nil]
+                    , polygon [ 0, 238, ((*rect1_x+*rect1_width/2),(*rect1_y+*rect1_height/2))::((*rect1_x),(*rect1_y+*rect1_height))::((*rect1_x+*rect1_width),(*rect1_y+*rect1_height))::nil]]
+                ) 120) 120) 245) 202;
